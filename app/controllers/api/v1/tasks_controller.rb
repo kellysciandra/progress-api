@@ -8,20 +8,20 @@ class Api::V1::TasksController < ApplicationController
     def show 
         @task = Task.find(params[:id])
 
-        render json: @tasks, status: 200
+        render json: @task, status: 200
     end 
 
     def create 
         @task = Task.create(task_params)
-
-        render json: @tasks, status: 200
+        
+        render json: @task, status: 200
     end 
 
     def update 
         @task = Task.find(params[:id])
         @task.update(task_params)
 
-        render json: @tasks, status: 200
+        render json: @task, status: 200
     end 
 
     def destroy
@@ -36,6 +36,6 @@ class Api::V1::TasksController < ApplicationController
     private 
 
     def task_params
-        params.require(:task).permit(:text, :reference)
+        params.require(:task).permit(:text, :reference, :day_id)
     end 
 end

@@ -8,5 +8,26 @@
 
 
 Task.create([
-    {text: 'idk', reference: 'http://booger.com' }
+    {text: 'idea 1', reference: 'http://booger.com', day_id: 1, user_id: 1},
+    {text: 'idea 2', reference: 'http://farts.com', day_id: 2, user_id: 1 },
+    {text: 'idk 3', reference: 'http://ass.com', day_id: 3, user_id: 1 },
+    {text: 'idk 4', reference: 'http://cheese.com', day_id: 4, user_id: 1 },
+    {text: 'idk 5', reference: 'http://time.com', day_id: 5, user_id: 1 },
+    {text: 'idk 6', reference: 'http://outoftime.com', day_id: 6, user_id: 1 },
+    {text: 'idk 6', reference: 'http://outoftime.com', day_id: 7, user_id: 1 }
+
+])
+
+Day.create([
+    {name: 'Monday', user_id: 1},
+    {name: 'Tuesday', user_id: 1},
+    {name: 'Wednesday', user_id: 1},
+    {name: 'Thursday', user_id: 1},
+    {name: 'Friday', user_id: 1},
+    {name: 'Saturday', user_id: 1},
+    {name: 'Sunday', user_id: 1},
+])
+
+User.create([
+    {name: "willy"}
 ])
